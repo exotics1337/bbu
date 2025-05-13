@@ -1,33 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Source code</title>
-<link rel="stylesheet" href="css/style.css">
-<script src="https://cdn.3dflipbook.net/js/jquery.min.js"></script>
+  <meta charset="UTF-8" />
+  <title>3D FlipBook – CDN Version</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Main FlipBook style -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/3d-flip-book@1.9.9/css/black-book-view.min.css" />
+
+  <!-- jQuery (required for FlipBook DOM hooks) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+  <!-- THREE.js (FlipBook dependency) -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.136.0/build/three.min.js"></script>
+
+  <!-- PDF.js (required for rendering PDF pages) -->
+  <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.16.105/build/pdf.min.js"></script>
+  <script>
+    window.PDFJS_LOCALE = {
+      pdfJsWorker: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@2.16.105/build/pdf.worker.min.js',
+      pdfJsCMapUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@2.16.105/cmaps/',
+    };
+  </script>
+
+  <!-- FlipBook Core -->
+  <script src="https://cdn.jsdelivr.net/npm/3d-flip-book@1.9.9/dist/flip-book.min.js"></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+    }
+    .flip-book-container {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 <body>
-<div class="source-link">
-  <a class="show-source" data="simple-tag-pdf">Show source code</a>
-</div>
 
-<div class="sample-container-box">
-  <div class="sample-container flip-book-container" src="https://files.catbox.moe/yckdop.pdf">
+  <div class="flip-book-container" src="https://files.catbox.moe/yckdop.pdf"></div>
 
-  </div>
-</div>
-
-
-
-<script src="js/three.min.js"></script>
-<script src="js/pdf.min.js"></script>
-
-<script type="text/javascript">
-  window.PDFJS_LOCALE = {
-    pdfJsWorker: 'js/pdf.worker.js',
-    pdfJsCMapUrl: 'cmaps'
-  };
-</script>
-<script src="js/3dflipbook.min.js"></script>
 </body>
 </html>
